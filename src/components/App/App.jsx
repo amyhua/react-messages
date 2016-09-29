@@ -5,6 +5,8 @@ import './App.css';
 // import MessageCount from '../MessageCount/MessageCount';
 // import MessageFilter from '../MessageFilter/MessageFilter';
 import MessageList from '../MessageList/MessageList';
+import MessageCount from '../MessageCount/MessageCount';
+import MessageFilter from '../MessageFilter/MessageFilter';
 
 /*
 
@@ -26,9 +28,19 @@ App
 */
 
 class App extends Component {
+  constructor(props) {
+    this.state = {
+      messages: props.messages // sets the initial messages from props
+    };
+  }
+
   render() {
     return (
       <div className="App">
+        <div className="message-header">
+          <MessageCount />
+          <MessageFilter />
+        </div>
         <MessageList messages={this.props.messages} />
       </div>
     );

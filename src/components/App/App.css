@@ -1,0 +1,20 @@
+.App {
+  width: 300px;
+}
+
+.App .message-header {
+  margin-bottom: 5px;
+  font-size: 1.5em;
+}
+
+.App .message-header .MessageFilter {
+  -webkit-appearance: none;
+  font-size: 1.5em;
+  padding: 5px 10px;
+  min-width: 150px;
+}
+
+.App .message-header .MessageFilter,
+.App .message-header .MessageCount {
+  display: inline;
+}
