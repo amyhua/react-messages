@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import MessageCount from '../MessageCount/MessageCount';
-import MessageFilter from '../MessageFilter/MessageFilter';
+// import MessageCount from '../MessageCount/MessageCount';
+// import MessageFilter from '../MessageFilter/MessageFilter';
 import MessageList from '../MessageList/MessageList';
 
 /*
@@ -29,11 +29,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>
-          <MessageCount />
-          <MessageFilter />
-        </div>
-        <MessageList />
+        <MessageList messages={this.props.messages} />
       </div>
     );
   }

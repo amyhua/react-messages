@@ -4,6 +4,6 @@ import App from './components/App/App';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <App messages={['Hello', 'Wassup', 'Whatever', 'Yoohoo']} />,
   document.getElementById('root')
 );
