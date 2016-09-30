@@ -29,6 +29,7 @@ App
 
 class App extends Component {
   constructor(props) {
+    super(props);
     this.state = {
       messages: props.messages // sets the initial messages from props
     };
