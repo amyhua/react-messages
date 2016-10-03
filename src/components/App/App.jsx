@@ -29,9 +29,18 @@ App
 
 class App extends Component {
   constructor(props) {
+    super(props);
     this.state = {
       messages: props.messages // sets the initial messages from props
     };
+    this.affectState = this.affectState.bind(this);
+  }
+
+  affectState() {
+    console.log('affectState')
+    this.setState({
+      messages: ['Hello', 'Wassup']
+    });
   }
 
   render() {
@@ -41,7 +50,8 @@ class App extends Component {
           <MessageCount />
           <MessageFilter />
         </div>
-        <MessageList messages={this.props.messages} />
+        <MessageList messages={this.props.messages}
+          affectState={this.affectState} />
       </div>
     );
   }

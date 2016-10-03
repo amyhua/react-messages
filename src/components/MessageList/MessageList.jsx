@@ -13,9 +13,14 @@ export default class MessageList extends Component {
               {this.props.messages.map((message, i) => (
                 <Message
                   key={i}
-                  message={message} />)
+                  message={message}
+                  affectState={this.props.affectState} />)
               )}
             </div>
             )
   }
 }
+
+MessageList.propTypes = {
+  affectState: PropTypes.func.isRequired
+};

@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-export default () => {
-  return <checkbox />;
+export default (props) => {
+  return <input type="checkbox" onChange={alert(props.affectState)}
+  onClick={props.affectState} />;
 }
